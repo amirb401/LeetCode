@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
+using System.Runtime.Intrinsics.X86;
 
 
 /*
@@ -8,7 +9,7 @@ using System.Reflection.Metadata.Ecma335;
  * Merge the two lists in a one sorted list. The list should be made by splicing together the nodes of the first two lists. 
  * Return the head of the merged linked list.
  */
-namespace LeetCode
+namespace LeetCode.Lists
 {
     // Definition for singly-linked list.
     public class ListNode
@@ -34,7 +35,7 @@ namespace LeetCode
             if (list2 == null) return list1;
 
             // Iterate through both lists
-            while(list1 != null && list2 != null)
+            while (list1 != null && list2 != null)
             {
                 if (list1.val == list2.val)
                 {
@@ -65,11 +66,8 @@ namespace LeetCode
         }
     } // EO MergeTwoSortedLists
 
-    public class Solution
-    {
-        static void Main(string[] args)
-        {
-
+    #region
+    /*
             // Initialize 2 lists
             ListNode c = new ListNode(4, null);
             ListNode b = new ListNode(2, c);
@@ -99,19 +97,18 @@ namespace LeetCode
             {
                 Console.WriteLine("List 2 Node: {0}", node.val);
             }
-            */
+       
 
-            var use = new MergeTwoSortedLists();
-            //var resultHead = use.MergeTwoLists(list1.ElementAt(0), list2.ElementAt(0));
-            var resultHead = use.MergeTwoLists(list1[0], list2[0]);
-            Console.WriteLine("End result is: " + resultHead.val);
+    var use = new MergeTwoSortedLists();
+    var resultHead = use.MergeTwoLists(list1[0], list2[0]);
+    Console.WriteLine("End result is: " + resultHead.val);
             while (resultHead != null)
             {
                 Console.WriteLine("Value: " + resultHead.val);
                 resultHead = resultHead.next;
             }
-        }
-    }
+    */
+    #endregion
 
 
 
