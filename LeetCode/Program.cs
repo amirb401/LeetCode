@@ -12,12 +12,8 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            IsAnagram run = new IsAnagram();
-            string s = "anagram";
-            string t = "nagaram";
-            string s2 = "rat";
-            string t2 = "car";
-            Console.WriteLine(run.isAnagramBool(s2, t2));
+            MaxProfit run = new MaxProfit();
+            Console.WriteLine(run.MaxProfitFunc(new int[] { 7, 1, 5, 3, 6, 4 }));
         }
     }
 }
